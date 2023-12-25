@@ -1,0 +1,81 @@
+
+# Image Blurring
+
+This project provides a graphical user interface (GUI) for blurring faces and license plates in images and live video streams using OpenCV, YOLO object detection, and face recognition.
+
+## Installation
+
+Make sure you have Python installed on your system.
+
+### Windows
+
+```bash
+python -m venv venv_name
+```
+
+```bash
+venv_name\Scripts\activate
+```
+
+### macOS and Linux
+
+```bash
+python3 -m venv venv_name
+```
+
+```bash
+source venv_name/bin/activate
+```
+
+After activating the virtual environment, install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+pip install opencv-python
+```
+
+```bash
+pip install --upgrade --force-reinstall ultralytics
+```
+
+```bash
+pip install face-recognition
+```
+
+## Usage
+
+To start the application, run the following command:
+
+```bash
+python gui.py
+```
+
+### Image Processing
+
+1. Click on the "Open Image" button.
+2. Select an image file (JPG, JPEG, or PNG) using the file dialog.
+3. The image will open, and you will see checkboxes for "Face" and "License Plate".
+4. Select the objects you want to blur (you can choose "Face", "License Plate", or both).
+5. Click on the "Blur Image" button.
+6. The image with the blurred objects will be displayed in a new window.
+
+### Live Video Processing
+
+1. Click on the "Open Live Stream" button.
+2. The live video stream from your default camera will start.
+3. You will see checkboxes for "Face" and "License Plate".
+4. Select the objects you want to blur (you can choose "Face", "License Plate", or both).
+5. The live video stream will show the processed frames with the selected objects blurred.
+6. To stop the process, press the "q" key.
+
+### Video Stream Processing
+
+1. Click on the "Open Video Stream" button.
+2. Select a video file (MP4 format) using the file dialog.
+3. The video will start playing, and you will see checkboxes for "Face" and "License Plate".
+4. Select the objects you want to blur (you can choose "Face", "License Plate", or both).
+5. The video will continue playing, and the selected objects will be blurred in each frame.
+6. To stop the process, press the "q" key.
